@@ -1,0 +1,55 @@
+diff --git a/panopoly_core.make b/panopoly_core.make
+index d1be9a7..dd2f7a7 100644
+--- a/panopoly_core.make
++++ b/panopoly_core.make
+@@ -13,7 +13,6 @@ projects[panels][version] = 3.x-dev
+ projects[panels][subdir] = contrib
+ projects[panels][download][type] = git
+ projects[panels][download][revision] = 2bb470e
+-projects[panels][download][branch] = 7.x-3.x
+ 
+ projects[panels_breadcrumbs][version] = 2.1
+ projects[panels_breadcrumbs][subdir] = contrib
+@@ -25,7 +24,6 @@ projects[fieldable_panels_panes][version] = 1.x-dev
+ projects[fieldable_panels_panes][subdir] = contrib
+ projects[fieldable_panels_panes][download][type] = git
+ projects[fieldable_panels_panes][download][revision] = 3b9c8b6
+-projects[fieldable_panels_panes][download][branch] = 7.x-1.x
+ 
+ projects[pm_existing_pages][version] = 1.4
+ projects[pm_existing_pages][subdir] = contrib
+@@ -34,7 +32,6 @@ projects[fape][version] = 1.x-dev
+ projects[fape][subdir] = contrib
+ projects[fape][download][type] = git
+ projects[fape][download][revision] = 1143ee2
+-projects[fape][download][branch] = 7.x-1.x
+ 
+ ; Views Magic
+ 
+@@ -56,7 +53,7 @@ projects[pathauto][patch][936222] = http://drupal.org/files/pathauto-persist-936
+ projects[token][version] = 1.5
+ projects[token][subdir] = contrib
+ 
+-projects[entity][version] = 1.1
++projects[entity][version] = 1.2
+ projects[entity][subdir] = contrib
+ 
+ projects[libraries][version] = 2.1
+@@ -70,7 +67,7 @@ projects[date][subdir] = contrib
+ projects[entityreference][version] = 1.0
+ projects[entityreference][subdir] = contrib
+ 
+-projects[field_group][version] = 1.1
++projects[field_group][version] = 1.3
+ projects[field_group][subdir] = contrib
+ 
+ projects[link][version] = 1.1
+@@ -82,7 +79,7 @@ projects[apps][version] = 1.0-beta7
+ projects[apps][subdir] = contrib
+ projects[apps][patch][1790902] = http://drupal.org/files/1790902-check-last-modified-existing.patch
+ 
+-projects[features][version] = 2.0-rc1
++projects[features][version] = 2.0
+ projects[features][subdir] = contrib
+ 
+ projects[strongarm][version] = 2.0
