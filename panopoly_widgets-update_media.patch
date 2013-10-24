@@ -1,8 +1,8 @@
 diff --git a/panopoly_widgets.make b/panopoly_widgets.make
-index 316acbe..e45a9d0 100644
+index 316acbe..a7a4679 100644
 --- a/panopoly_widgets.make
 +++ b/panopoly_widgets.make
-@@ -21,13 +21,13 @@ projects[menu_block][subdir] = contrib
+@@ -21,14 +21,15 @@ projects[menu_block][subdir] = contrib
  projects[file_entity][version] = 2.x-dev
  projects[file_entity][subdir] = contrib
  projects[file_entity][download][type] = git
@@ -16,5 +16,7 @@ index 316acbe..e45a9d0 100644
 -projects[media][download][revision] = 2319170
 +projects[media][download][revision] = e7be30f
  projects[media][download][branch] = 7.x-2.x
++projects[media][patch][2067063] = https://drupal.org/files/media-broken-wysiwyg-2067063-101_reroll.patch
  
  projects[media_youtube][version] = 2.0-rc3
+ projects[media_youtube][subdir] = contrib
