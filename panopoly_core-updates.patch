@@ -1,5 +1,5 @@
 diff --git a/panopoly_core.make b/panopoly_core.make
-index d1be9a7..dd2f7a7 100644
+index d1be9a7..06e63bc 100644
 --- a/panopoly_core.make
 +++ b/panopoly_core.make
 @@ -13,7 +13,6 @@ projects[panels][version] = 3.x-dev
@@ -44,9 +44,16 @@ index d1be9a7..dd2f7a7 100644
  projects[field_group][subdir] = contrib
  
  projects[link][version] = 1.1
-@@ -82,7 +79,7 @@ projects[apps][version] = 1.0-beta7
+@@ -78,11 +75,12 @@ projects[link][subdir] = contrib
+ 
+ ; Harness the Power of Features and Apps with Default Content
+ 
+-projects[apps][version] = 1.0-beta7
++projects[apps][version] = 1.x-dev
  projects[apps][subdir] = contrib
- projects[apps][patch][1790902] = http://drupal.org/files/1790902-check-last-modified-existing.patch
+-projects[apps][patch][1790902] = http://drupal.org/files/1790902-check-last-modified-existing.patch
++projects[apps][download][type] = git
++projects[apps][download][revision] = b9d82b7
  
 -projects[features][version] = 2.0-rc1
 +projects[features][version] = 2.0
