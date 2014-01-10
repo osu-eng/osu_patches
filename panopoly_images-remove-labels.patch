@@ -1,0 +1,23 @@
+diff --git a/panopoly_images.module b/panopoly_images.module
+index f5d77d1..5c7766b 100644
+--- a/panopoly_images.module
++++ b/panopoly_images.module
+@@ -11,18 +11,6 @@ function panopoly_images_init() {
+   drupal_add_css(drupal_get_path('module', 'panopoly_images') . '/panopoly-images.css', array('group' => CSS_THEME));
+ }
+ 
+-
+-/**
+- * Implementation of drupal_alter() for media_wysiwyg_allowed_view_modes
+- */
+-function panopoly_images_media_wysiwyg_allowed_view_modes_alter(&$options, $context) {
+-
+-  // Relabel some options
+-  $options['default']['label'] = t('Original Size');
+-  $options['teaser']['label'] = t('Quarter Size');
+-  $options['preview']['label'] = t('Thumbnail');
+-}
+-
+ /**
+  * Implementation of hook_jorm_alter()
+  */
