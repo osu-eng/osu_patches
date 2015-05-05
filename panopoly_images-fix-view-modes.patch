@@ -1,35 +1,32 @@
 diff --git a/panopoly_images.module b/panopoly_images.module
-index 973ef18..d185300 100644
+index 531fcf1..e33256e 100644
 --- a/panopoly_images.module
 +++ b/panopoly_images.module
-@@ -11,19 +11,6 @@ function panopoly_images_init() {
-   drupal_add_css(drupal_get_path('module', 'panopoly_images') . '/panopoly-images.css', array('group' => CSS_THEME));
- }
- 
--
--/**
-- * Implements hook_media_wysiwyg_wysiwyg_allowed_view_modes_alter().
-- */
--function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$options, $context) {
--  if ($context->type == 'image') {
--    // Relabel some options
--    $options['default']['label'] = t('Original Size');
--    $options['teaser']['label'] = t('Quarter Size');
--    $options['preview']['label'] = t('Thumbnail');
--  }
--}
--
+@@ -22,6 +22,7 @@ function panopoly_images_init() {
  /**
-  * Implementation of hook_jorm_alter()
+  * Implements hook_media_wysiwyg_wysiwyg_allowed_view_modes_alter().
   */
-@@ -62,10 +49,6 @@ function panopoly_images_form_alter(&$form, &$form_state, $form_id) {
++/* Commented out by patch
+ function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$options, $context) {
+   if ($context->type == 'image') {
+     // Relabel some options
+@@ -37,6 +38,7 @@ function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$option
      }
    }
+ }
++*/
  
--  // Set the default media style to be default
--  if ($form_id == 'media_format_form' && !empty($form['options']['format'])) {
--    $form['options']['format']['#default_value'] = 'default';
--  }
+ /**
+  * Implementation of hook_jorm_alter()
+@@ -87,9 +89,11 @@ function panopoly_images_form_alter(&$form, &$form_state, $form_id) {
+   }
+ 
+   // Set the default media style to be default
++  /* Commented out by patch.
+   if ($form_id == 'media_format_form' && !empty($form['options']['format'])) {
+     $form['options']['format']['#default_value'] = 'default';
+   }
++  */
  }
  
  /**
