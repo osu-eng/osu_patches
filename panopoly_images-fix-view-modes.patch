@@ -1,32 +1,42 @@
 diff --git a/panopoly_images.module b/panopoly_images.module
-index 531fcf1..e33256e 100644
+index 531fcf1..6caf0e7 100644
 --- a/panopoly_images.module
 +++ b/panopoly_images.module
-@@ -22,6 +22,7 @@ function panopoly_images_init() {
+@@ -20,25 +20,6 @@ function panopoly_images_init() {
+ }
+ 
  /**
-  * Implements hook_media_wysiwyg_wysiwyg_allowed_view_modes_alter().
+- * Implements hook_media_wysiwyg_wysiwyg_allowed_view_modes_alter().
+- */
+-function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$options, $context) {
+-  if ($context->type == 'image') {
+-    // Relabel some options
+-    $labels = array(
+-      'default' => t('Original Size'),
+-      'teaser' => t('Quarter Size'),
+-      'preview' => t('Thumbnail'),
+-    );
+-    foreach ($labels as $name => $label) {
+-      if (isset($options[$name])) {
+-        $options[$name]['label'] = $label;
+-      }
+-    }
+-  }
+-}
+-
+-/**
+  * Implementation of hook_jorm_alter()
   */
-+/* Commented out by patch
- function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$options, $context) {
-   if ($context->type == 'image') {
-     // Relabel some options
-@@ -37,6 +38,7 @@ function panopoly_images_media_wysiwyg_wysiwyg_allowed_view_modes_alter(&$option
+ function panopoly_images_form_alter(&$form, &$form_state, $form_id) {
+@@ -85,11 +66,6 @@ function panopoly_images_form_alter(&$form, &$form_state, $form_id) {
+       );
      }
    }
- }
-+*/
- 
- /**
-  * Implementation of hook_jorm_alter()
-@@ -87,9 +89,11 @@ function panopoly_images_form_alter(&$form, &$form_state, $form_id) {
-   }
- 
-   // Set the default media style to be default
-+  /* Commented out by patch.
-   if ($form_id == 'media_format_form' && !empty($form['options']['format'])) {
-     $form['options']['format']['#default_value'] = 'default';
-   }
-+  */
+-
+-  // Set the default media style to be default
+-  if ($form_id == 'media_format_form' && !empty($form['options']['format'])) {
+-    $form['options']['format']['#default_value'] = 'default';
+-  }
  }
  
  /**
